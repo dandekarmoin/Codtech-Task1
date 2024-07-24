@@ -1,0 +1,28 @@
+def main():
+    grades = []
+
+    num_subjects = int(input("Enter number of subjects: "))
+
+    for _ in range(num_subjects):
+        grade = float(input("Enter grade: "))
+        grades.append(grade)
+
+    average = sum(grades) / num_subjects
+
+    if average >= 90:
+        letter, gpa = 'A', 4.0
+    elif average >= 80:
+        letter, gpa = 'B', 3.0
+    elif average >= 70:
+        letter, gpa = 'C', 2.0
+    elif average >= 60:
+        letter, gpa = 'D', 1.0
+    else:
+        letter, gpa = 'F', 0.0
+
+    print("\nAverage:", average)
+    print("Letter Grade:", letter)
+    print("GPA:", gpa)
+
+if __name__ == "__main__":
+    main()
